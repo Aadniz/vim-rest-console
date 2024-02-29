@@ -831,12 +831,15 @@ Thanks to the contributors (in alphabetical order of GitHub account)
     @dan-silva
     @dflupu
     @diepm
+    @emaniacs
+    @gagara
     @iamFIREcracker
     @jojoyuji
     @korin
     @minhajuddin
     @mjakl
     @nathanaelkane
+    @nilsboy
     @p1otr
     @rawaludin
     @rlisowski
