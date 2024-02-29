@@ -34,7 +34,7 @@ work with the older versions.
 To install using [pathogen.vim](https://github.com/tpope/vim-pathogen)
 
     cd ~/.vim/bundle
-    git clone https://github.com/diepm/vim-rest-console.git
+    git clone https://github.com/Aadniz/vim-rest-console.git
 
 To install using [Vundle](https://github.com/gmarik/Vundle.vim)
 
@@ -47,11 +47,11 @@ Other methods should work as well.
 
 For more examples, check out
 
-https://raw.githubusercontent.com/diepm/vim-rest-console/master/sample.rest
+https://raw.githubusercontent.com/Aadniz/vim-rest-console/master/sample.rest
 
 there is also an alternative version using global settings:
 
-https://raw.githubusercontent.com/diepm/vim-rest-console/master/sample_global.rest
+https://raw.githubusercontent.com/Aadniz/vim-rest-console/master/sample_global.rest
 
 The following examples assume that an ElasticSearch service is running at
 localhost. The pipe (`|`) indicates the current position of the cursor.
@@ -341,7 +341,7 @@ verb is appended to the output view.
 
 ### 6. Configuration
 
-https://github.com/diepm/vim-rest-console/blob/master/doc/vim-rest-console.txt
+https://github.com/Aadniz/vim-rest-console/blob/master/doc/vim-rest-console.txt
 
 ### 7. Tips 'n Tricks
 
@@ -393,6 +393,7 @@ output highlighting based on `filetype`, place this setting in `.vimrc`:
 
 Thanks to the contributors (in alphabetical order of GitHub account)
 
+    @diepm
     @dan-silva
     @dflupu
     @iamFIREcracker
