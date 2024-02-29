@@ -393,9 +393,9 @@ output highlighting based on `filetype`, place this setting in `.vimrc`:
 
 Thanks to the contributors (in alphabetical order of GitHub account)
 
-    @diepm
     @dan-silva
     @dflupu
+    @diepm
     @iamFIREcracker
     @jojoyuji
     @korin
