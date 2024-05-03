@@ -190,7 +190,7 @@ endfunction
 "
 " @param  int  a:start
 " @param  int  a:end
-" @return string 
+" @return string
 "
 function! s:ParsePipe(start, end)
   let pipe = ''
@@ -531,9 +531,17 @@ function! s:GetCurlCommand(request)
   if !empty(a:request.dataBody)
     call add(curlArgs, s:GetCurlDataArgs(a:request))
   endif
+
+  """ Set the curl timeout, removing it if 0 was specified.
   let vrcCurlTimeout = s:GetOpt('vrc_curl_timeout', '1m')
+  if vrcCurlTimeout =~? '^0[smhd]\?$'
+    let vrcCurlTimeout = ''
+  else
+    let vrcCurlTimeout = 'timeout ' . vrcCurlTimeout . ' '
+  endif
+
   return [
-    \ 'timeout ' . vrcCurlTimeout . ' curl --silent ' . join(curlArgs) . ' ' . s:Shellescape(a:request.host . a:request.requestPath),
+    \ vrcCurlTimeout . 'curl --silent ' . join(curlArgs) . ' ' . s:Shellescape(a:request.host . a:request.requestPath),
     \ curlOpts
   \]
 endfunction
@@ -750,7 +758,7 @@ function! s:DisplayOutput(tmpBufName, outputInfo, config)
   """ Display commands in result buffer if any.
   if s:GetOpt('vrc_show_command_in_result_buffer', 0)
     if (!empty(a:outputInfo['commands']))
-      let prefixedList = map(copy(a:outputInfo['commands']), '"REQUEST: " . v:val . "\t"') 
+      let prefixedList = map(copy(a:outputInfo['commands']), '"REQUEST: " . v:val . "\t"')
       call append(0, prefixedList)
       call append(1, '')
     endif

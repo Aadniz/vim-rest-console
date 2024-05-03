@@ -726,7 +726,7 @@ pane. It's disabled by default. To enable:
 ------------------------------------------------------------------------------
 *vrc_show_command_in_quickfix*
 
-This option disables the printing of the executed curl command in the quickfix 
+This option disables the printing of the executed curl command in the quickfix
 list. It's enabled by default. To disable:
 >
     let g:vrc_show_command_in_quickfix = 0
@@ -738,6 +738,11 @@ Kill curl after this timeout - default 1m.
 See man timeout for details.
 >
     let g:vrc_curl_timeout = '5s'
+
+This option cannot be used on Windows because TIMEOUT.EXE serves a different
+purpose than bash's timeout. To disable:
+>
+    let g:vrc_curl_timeout = '0'
 
 ------------------------------------------------------------------------------
 *vrc_show_command_in_result_buffer*
@@ -841,6 +846,7 @@ Thanks to the contributors (in alphabetical order of GitHub account)
     @nathanaelkane
     @nilsboy
     @p1otr
+    @PhilRunninger
     @rawaludin
     @rlisowski
     @sethtrain
